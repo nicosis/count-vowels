@@ -1,6 +1,6 @@
 function countVowels(palabra) {
         // Defino una variable 'string' con los valores para comparar luego en un bucle
-        const vocales = "aeiouAEIOUáéíóúÁÉÍÓÚ"
+        const vocales = "aeiouáéíóú"
         // Defino una variable 'number' donde se almacenara la suma de vocales
         let contador = 0
         // iniciamos un bucle que recorrera cada letra de la palabra entregada en el parametro

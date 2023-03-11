@@ -1,22 +1,23 @@
-function countVowels(palabra, otraPalabra) {
+esVocal = (letra) => {
+    let vocales = "aeiouáéíóú"
+    return vocales.includes(letra);
+};
 
-    let vocales = "aeiouAEIOUáéíóúÁÉÍÓÚ"
+countVowels = (palabra, otraPalabra) => {
     let contador = 0
 
-    for (let letra = 0; letra < palabra.length; letra++) {
-        if (vocales.indexOf(palabra[letra]) !== -1) {
+    for (let i of palabra) {
+        if (esVocal(i)) {
             contador++;
         };
     };
 
-    for (let letra2 = 0; letra2 < otraPalabra.length; letra2++) {
-        if (vocales.indexOf(otraPalabra[letra2]) !== -1) {
+    for (let x of otraPalabra) {
+        if (esVocal(x)) {
             contador++;
         };
     };
-
     return contador;
-
 };
 
 console.log(countVowels("calor", "sal")); // 3
